@@ -14,6 +14,10 @@ public class Agenda {
 		
 	}
 	
+	public void buscaNota() {
+		
+	}
+	
 	public void listaNota() {
 		
 	}
