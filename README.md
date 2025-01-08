@@ -8,3 +8,10 @@ Este é um projeto de uma aplicação monolítica desenvolvida em Java com conex
 - Associar tarefas a um horário específico.
 - Listar agendas existentes.
 
+## 🛠️ Tecnologias Utilizadas
+- Linguagem: Java (JDK 17+ recomendado).
+- Banco de Dados: MySQL.
+- ORM Simples: Conexão direta via JDBC.
+- Estrutura: Arquitetura Monolítica.
+- IDE Recomendada: IntelliJ IDEA ou Eclipse.
+
