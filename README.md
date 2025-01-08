@@ -63,5 +63,17 @@ private static final String USER = "seu_usuario";
 private static final String PASSWORD = "sua_senha";
 
 ```
+## 💻 Como Executar
+
+1. Clone o repositório:
+```
+git clone https://github.com/seu-usuario/agenda-digital.git
+cd agenda-digital
+
+```
+2. Compile o projeto:
+```
+javac -d bin src/**/*.java
+```
 
 
