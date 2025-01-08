@@ -31,4 +31,30 @@ src/
 │   └── DatabaseConnection.java  # Classe para gerenciar conexão com o banco
 └── Main.java               # Classe principal para execução do programa
 ```
+## 🎲 Configuração do Banco de Dados
+
+1. Crie o banco de dados no MySQL:
+
+```
+CREATE DATABASE AgendaDigital;
+
+USE AgendaDigital;
+
+CREATE TABLE Agenda (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    ano INT NOT NULL,
+    mes INT NOT NULL,
+    dia INT NOT NULL,
+    hora INT NOT NULL
+);
+
+CREATE TABLE Tarefa (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    agenda_id INT NOT NULL,
+    descricao TEXT NOT NULL,
+    FOREIGN KEY (agenda_id) REFERENCES Agenda(id) ON DELETE CASCADE
+);
+
+```
+
 
