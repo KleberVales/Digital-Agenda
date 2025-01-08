@@ -56,5 +56,12 @@ CREATE TABLE Tarefa (
 );
 
 ```
+2. Configure o usuário e a senha no arquivo DatabaseConnection.java:
+
+```
+private static final String USER = "seu_usuario";
+private static final String PASSWORD = "sua_senha";
+
+```
 
 
