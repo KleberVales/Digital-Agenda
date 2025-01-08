@@ -74,6 +74,12 @@ cd agenda-digital
 2. Compile o projeto:
 ```
 javac -d bin src/**/*.java
+
+```
+3. Execute o programa:
+```
+java -cp bin Main
+
 ```
 
 
