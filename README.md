@@ -13,5 +13,5 @@ Este é um projeto de uma aplicação monolítica desenvolvida em Java com conex
 - Banco de Dados: MySQL.
 - ORM Simples: Conexão direta via JDBC.
 - Estrutura: Arquitetura Monolítica.
-- IDE Recomendada: IntelliJ IDEA ou Eclipse.
+- IDE Recomendada: Eclipse.
 
