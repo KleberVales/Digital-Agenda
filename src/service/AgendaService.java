@@ -12,7 +12,7 @@ public class AgendaService {
 	private final AgendaDAO agendaDAO = new AgendaDAO();
 	private final TarefaDAO tarefaDAO = new TarefaDAO();
 
-	public void adicionarAgenda(int ano, int mes, int dia, int hora) throws SQLException {
+	public void adicionarAgenda(int ano, int mes, int dia, int hora, String descricao) throws SQLException {
 
 		Agenda agenda = new Agenda();
 
@@ -20,6 +20,7 @@ public class AgendaService {
 		agenda.setMes(mes);
 		agenda.setDia(dia);
 		agenda.setHora(hora);
+		agenda.setDescricao(descricao);
 
 		agendaDAO.salvar(agenda);
 	}
