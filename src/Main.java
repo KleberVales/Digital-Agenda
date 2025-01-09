@@ -15,7 +15,7 @@ public class Main {
 				System.out.println("4. Sair");
 
 				int opcao = scanner.nextInt();
-				scanner.nextLine(); // Consumir o newline
+				scanner.nextLine(); 
 
 				switch (opcao) {
 				case 1 -> {
@@ -42,7 +42,7 @@ public class Main {
 
 					System.out.println("ID da Agenda:");
 					int agendaId = scanner.nextInt();
-					scanner.nextLine(); // Consumir o newline
+					scanner.nextLine(); 
 
 					System.out.println("Descrição da Tarefa:");
 					String descricao = scanner.nextLine();
