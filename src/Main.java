@@ -40,7 +40,8 @@ public class Main {
 					System.out.println("Agenda adicionada com sucesso!");
 				}
 				case 2 -> {
-					service.listarAgendas();
+					service.listarAgendas().forEach(agenda -> System.out.println(agenda.getAno() + "/" + agenda.getMes() + "/"
+							+ agenda.getDia() + " - " + agenda.getHora() + ":00 " + agenda.getDescricao()));
 					
 				}
 				case 3 -> {

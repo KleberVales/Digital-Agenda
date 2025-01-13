@@ -46,6 +46,7 @@ public class AgendaDAO {
 				agenda.setMes(rs.getInt("mes"));
 				agenda.setDia(rs.getInt("dia"));
 				agenda.setHora(rs.getInt("hora"));
+				agenda.setDescricao(rs.getString("descricao"));
 				agendas.add(agenda);
 
 			}
