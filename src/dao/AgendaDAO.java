@@ -11,7 +11,7 @@ public class AgendaDAO {
 
 	public void salvar(Agenda agenda) throws SQLException {
 
-		String sql = "INSERT INTO Agenda (ano, mes, dia, hora) VALUES (?, ?, ?, ?)";
+		String sql = "INSERT INTO Agenda (ano, mes, dia, hora, descricao) VALUES (?, ?, ?, ?, ?)";
 
 		try (Connection conn = DatabaseConnection.getConnection();
 				PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -20,6 +20,7 @@ public class AgendaDAO {
 			stmt.setInt(2, agenda.getMes());
 			stmt.setInt(3, agenda.getDia());
 			stmt.setInt(4, agenda.getHora());
+			stmt.setString(5, agenda.getDescricao());
 
 			stmt.executeUpdate();
 

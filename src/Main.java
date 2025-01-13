@@ -3,8 +3,6 @@ import java.util.Scanner;
 
 //testando nova branch
 
-
-
 public class Main {
 	public static void main(String[] args) {
 
@@ -14,11 +12,11 @@ public class Main {
 		try {
 			while (true) {
 				System.out.println("1. Adicionar Agenda");
-				
-				System.out.println(". Sair");
+				System.out.println("2. Listar Tarefas");
+				System.out.println("3. Sair");
 
 				int opcao = scanner.nextInt();
-				scanner.nextLine(); 
+				scanner.nextLine();
 
 				switch (opcao) {
 				case 1 -> {
@@ -33,7 +31,7 @@ public class Main {
 
 					System.out.println("Hora:");
 					int hora = scanner.nextInt();
-					
+
 					System.out.println("Lembrete:");
 					String descricao = scanner.next();
 
@@ -42,6 +40,10 @@ public class Main {
 					System.out.println("Agenda adicionada com sucesso!");
 				}
 				case 2 -> {
+					service.listarAgendas();
+					
+				}
+				case 3 -> {
 					System.out.println("Saindo...");
 					return;
 				}

@@ -53,9 +53,14 @@ public class Agenda {
 		return this.hora;
 	}
 
-	public void setId(int int1) {
+	public void setId(int id2) {
 		// TODO Auto-generated method stub
+		this.id = id2;
 
+	}
+
+	public int getId() {
+		return this.id;
 	}
 
 	public void setDescricao(String descricao) {
