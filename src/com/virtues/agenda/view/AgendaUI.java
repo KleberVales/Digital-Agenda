@@ -9,13 +9,14 @@ import java.util.List;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
 import com.virtues.agenda.controller.Controller;
 import com.virtues.agenda.model.Compromisso;
-import javax.swing.JTextArea;
 
 public class AgendaUI extends JFrame {
 
@@ -26,12 +27,13 @@ public class AgendaUI extends JFrame {
 	private JTextField textField_2;
 	private Controller controller;
 	private JTextArea textArea;
+	private JFrame frame;
 
 	public AgendaUI() {
 		controller = new Controller();
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 874, 600);
+		setBounds(100, 100, 1126, 659);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -89,7 +91,7 @@ public class AgendaUI extends JFrame {
 				textArea.setText("");
 				
 				for(Compromisso c: compromisso) {
-					textArea.append("Compromisso: " + c.getID() + c.getData() + c.getHora() + c.getDescricao() + "\n");
+					textArea.append("Compromisso: " + c.getID() + " " + c.getData() + " " + c.getHora() + " " + c.getDescricao() + "\n");
 				}
 				
 				
@@ -104,8 +106,27 @@ public class AgendaUI extends JFrame {
 		textArea = new JTextArea();
 		textArea.setFont(new Font("Arial", Font.BOLD, 14));
 		textArea.setEditable(false);
-		textArea.setBounds(520, 71, 330, 447);
+		textArea.setBounds(520, 71, 556, 510);
 		contentPane.add(textArea);
+		
+		JButton btnNewButton_2 = new JButton("DELETAR");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				String idStr = JOptionPane.showInputDialog(frame, "Insira o id do compromisso que sera removido");
+				
+				if(idStr != null && !idStr.isEmpty()) {
+					
+					int id = Integer.parseInt(idStr);
+					
+					controller.deletarCompromisso(id);
+					
+				}
+			}
+		});
+		btnNewButton_2.setFont(new Font("Arial", Font.BOLD, 14));
+		btnNewButton_2.setBounds(21, 379, 123, 34);
+		contentPane.add(btnNewButton_2);
 	}
 
 	public void iniciar() {

@@ -25,4 +25,11 @@ public class Controller {
 		return dao.listarCompromisso();
 	}
 
+
+	public void deletarCompromisso(int id) {
+		
+		dao.remover(id);
+		
+	}
+
 }

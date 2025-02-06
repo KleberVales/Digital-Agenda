@@ -65,4 +65,19 @@ public class CompromissoDAO {
 		return lista;
 	}
 
+	public void remover(int id) {
+		
+		String sql = "DELETE FROM compromissos where id = ?";
+		
+		try(PreparedStatement ptmt = conn.prepareStatement(sql)){
+			
+			ptmt.setInt(1, id);
+			ptmt.executeUpdate();
+			
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
 }
