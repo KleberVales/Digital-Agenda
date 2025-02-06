@@ -10,3 +10,5 @@ Uma aplicação de agenda desenvolvida em Java com Swing para interface gráfica
 ✅ Listar compromissos salvos. \
 ✅ Interface gráfica intuitiva utilizando Java Swing. \
 ✅ Persistência de dados com MySQL.
+
+## 🛠️ Tecnologias Utilizadas
