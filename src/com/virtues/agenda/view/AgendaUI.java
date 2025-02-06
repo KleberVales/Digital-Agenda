@@ -4,6 +4,7 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -13,6 +14,8 @@ import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
 import com.virtues.agenda.controller.Controller;
+import com.virtues.agenda.model.Compromisso;
+import javax.swing.JTextArea;
 
 public class AgendaUI extends JFrame {
 
@@ -22,6 +25,7 @@ public class AgendaUI extends JFrame {
 	private JTextField textField_1;
 	private JTextField textField_2;
 	private Controller controller;
+	private JTextArea textArea;
 
 	public AgendaUI() {
 		controller = new Controller();
@@ -75,6 +79,33 @@ public class AgendaUI extends JFrame {
 		btnNewButton.setFont(new Font("Arial", Font.BOLD, 14));
 		btnNewButton.setBounds(23, 324, 123, 34);
 		contentPane.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("LISTAR");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				List<Compromisso> compromisso = controller.obterCompromisso();
+				
+				textArea.setText("");
+				
+				for(Compromisso c: compromisso) {
+					textArea.append("Compromisso: " + c.getID() + c.getData() + c.getHora() + c.getDescricao() + "\n");
+				}
+				
+				
+				
+				
+			}
+		});
+		btnNewButton_1.setFont(new Font("Arial", Font.BOLD, 14));
+		btnNewButton_1.setBounds(156, 324, 123, 34);
+		contentPane.add(btnNewButton_1);
+		
+		textArea = new JTextArea();
+		textArea.setFont(new Font("Arial", Font.BOLD, 14));
+		textArea.setEditable(false);
+		textArea.setBounds(520, 71, 330, 447);
+		contentPane.add(textArea);
 	}
 
 	public void iniciar() {

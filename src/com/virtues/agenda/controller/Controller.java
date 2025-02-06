@@ -1,5 +1,7 @@
 package com.virtues.agenda.controller;
 
+import java.util.List;
+
 import com.virtues.agenda.dao.CompromissoDAO;
 import com.virtues.agenda.model.Compromisso;
 
@@ -15,6 +17,12 @@ public class Controller {
 		
 		dao.salvarCompromisso(new Compromisso(0, data, hora, descricao ));
 		
+	}
+
+
+	public List<Compromisso> obterCompromisso() {
+
+		return dao.listarCompromisso();
 	}
 
 }
