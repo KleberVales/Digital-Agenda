@@ -5,8 +5,8 @@ Uma aplicação de agenda desenvolvida em Java com Swing para interface gráfica
 ## 🚀 Funcionalidades
 
 ✅ Adicionar compromissos com data e hora. \
-✅ Editar compromissos existentes.
-✅ Excluir compromissos.
-✅ Listar compromissos salvos.
-✅ Interface gráfica intuitiva utilizando Java Swing.
+✅ Editar compromissos existentes. \
+✅ Excluir compromissos. \
+✅ Listar compromissos salvos. \
+✅ Interface gráfica intuitiva utilizando Java Swing. \
 ✅ Persistência de dados com MySQL.
