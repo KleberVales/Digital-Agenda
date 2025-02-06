@@ -12,3 +12,9 @@ Uma aplicação de agenda desenvolvida em Java com Swing para interface gráfica
 ✅ Persistência de dados com MySQL.
 
 ## 🛠️ Tecnologias Utilizadas
+
+* Java (JDK 17 ou superior)
+* Java Swing (Interface Gráfica)
+* MySQL (Banco de Dados)
+* JDBC (Conexão com o banco de dados)
+* MVC (Arquitetura utilizada)
