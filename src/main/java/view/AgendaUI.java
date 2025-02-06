@@ -47,9 +47,11 @@ public class AgendaUI {
         btnSalvar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+            	
                 controller.adicionarCompromisso(txtData.getText(), txtHora.getText(), txtDescricao.getText());
                 JOptionPane.showMessageDialog(frame, "Compromisso salvo!");
                 atualizarAgenda();
+                
             }
         });
 
@@ -63,13 +65,17 @@ public class AgendaUI {
         btnRemover.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+            	
                 String idStr = JOptionPane.showInputDialog(frame, "Digite o ID do compromisso para remover:");
+                
                 if (idStr != null && !idStr.isEmpty()) {
                     int id = Integer.parseInt(idStr);
                     controller.removerCompromisso(id);
                     atualizarAgenda();
                 }
+                
             }
+            
         });
 
         atualizarAgenda();
