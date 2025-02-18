@@ -31,5 +31,10 @@ public class Controller {
 		dao.remover(id);
 		
 	}
+	
+	public List<Compromisso> obterCompromisso(int id) {
+
+		return dao.listarCompromisso();
+	}
 
 }
