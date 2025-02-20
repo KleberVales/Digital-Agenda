@@ -74,6 +74,8 @@ public class UpdateUI extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
+				int id = Integer.parseInt(textField_3.getText());
+				controller.updateCompromisso(id, textField.getText(), textField_1.getText(), textField_2.getText());
 				
 			}
 		});
