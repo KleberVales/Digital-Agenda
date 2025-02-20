@@ -80,4 +80,29 @@ public class CompromissoDAO {
 		
 	}
 
+	public void modifiedCompromisso(Compromisso compromisso) {
+		// TODO Auto-generated method stub
+		
+		String sql = "UPDATE compromissos SET data = ?, hora = ?, descricao = ? WHERE id = ?";
+	    
+	    try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+	        stmt.setString(1, compromisso.getData());
+	        stmt.setString(2, compromisso.getHora());
+	        stmt.setString(3, compromisso.getDescricao());
+	        stmt.setInt(4, compromisso.getID());
+
+	        int linhasAfetadas = stmt.executeUpdate();
+	        if (linhasAfetadas > 0) {
+	            System.out.println("Compromisso atualizado com sucesso!");
+	        } else {
+	            System.out.println("Nenhum compromisso encontrado com esse ID.");
+	        }
+
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    }
+		
+	}
+
 }

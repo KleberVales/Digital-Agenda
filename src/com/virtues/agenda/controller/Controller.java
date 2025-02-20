@@ -37,4 +37,11 @@ public class Controller {
 		return dao.listarCompromisso();
 	}
 
+
+	public void updateCompromisso(int id, String text, String text2, String text3) {
+		
+		dao.modifiedCompromisso(new Compromisso(id, text, text2, text3));
+		
+	}
+
 }
